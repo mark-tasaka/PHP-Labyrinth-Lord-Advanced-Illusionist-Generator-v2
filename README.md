@@ -4,6 +4,20 @@ The Labyrinth Lord Advanced Companion Illusionist Character Generator Version 2 
 
 ---------------
 
+A live version of the Labyrinth Lord Advanced Companion Illusionist Character Generator Version 2 is available at:
+
+https://www.oldschooladventures.org/ll/classes2/illusionist/
+
+----------
+
+
+
+Update 1.01: 2022-07-12
+
+Updates to illusionist.php, illusionist.css, illusionist.png, classDetails.php, demiHumans.php, spells.php, and xp.php.  A link to the live version of the Labyrinth Lord Advanced Companion Illusionist Character Generator Version 2 has been added.
+
+
+
 Initial commit: 2022-07-09
 
 The initial commit for the Labyrinth Lord Advanced Companion Illusionist Character Generator Version 2.
