@@ -1,6 +1,6 @@
 <?php
 
-/*Magic-User */
+/*Illustionist/Magic-User */
 
 function getHitPoints($level, $conMod)
 {
@@ -49,53 +49,7 @@ function getHitPoints($level, $conMod)
 
 }
 
-//cleric d8
-function getAdvancedHitPoints($level, $conMod)
-{
-    $hitPoints = 0;
 
-    if($level < 10)
-    {
-        for($i = 0; $i < $level; ++$i)
-        {
-            $levelHP = rand(3, 8);
-            $levelHP += $conMod;
-    
-            if($levelHP < 3)
-            {
-                $levelHP = 3;
-            }
-    
-            $hitPoints += $levelHP;
-    
-        }
-    }
-    else
-    {
-        for($i = 0; $i < 10; ++$i)
-        {
-            $levelHP = rand(3, 8);
-            $levelHP += $conMod;
-    
-            if($levelHP < 3)
-            {
-                $levelHP = 3;
-            }
-    
-            $hitPoints += $levelHP;
-    
-        }
-
-        $levelTenPlusHP = ($level - 9);
-
-        $hitPoints += $levelTenPlusHP;
-
-    }
-
-
-    return $hitPoints;
-
-}
 
 
 function saveBreathAttack($level)
@@ -225,49 +179,6 @@ function saveSpells($level)
 
 }
 
-
-function primeReq($abilityScore)
-{
-    
-    if($abilityScore >= 3 && $abilityScore <=5)
-        {
-            return "-10% Experience Point Adjustment (Prime Requisite)<br/>";
-        }
-    else if($abilityScore >= 6 && $abilityScore <=8)
-        {
-            return "-5% Experience Point Adjustment (Prime Requisite)<br/>";
-        }
-    else if($abilityScore >= 13 && $abilityScore <=15)
-        {
-            return "+5% Experience Point Adjustment (Prime Requisite)<br/>";
-        }
-    else if($abilityScore >= 16 && $abilityScore <=18)
-        {
-            return "+10% Experience Point Adjustment (Prime Requisite)<br/>";
-        }
-    else
-        {
-            return "";
-        }
-    
-}
-
-function secondAttack($level)
-{
-    if($level >= 15 && $level <= 18)
-    {
-        return "Fighter has 2 attacks per round.";
-    }
-    else if($level > 18)
-    {
-        return "Fighter has 3 attacks per round.";
-    }
-    else
-    {
-        return "";
-    }
-
-}
 
 
 function strengthModifierDescription($abilityScore)
@@ -677,6 +588,53 @@ function spellProbability ($intelligence)
         }
     
     return $message;
+}
+
+
+function illusionistMinDex($dexterity)
+{
+    if($dexterity <= 15)
+    {
+        $dexterity = 16;
+    }
+
+    return $dexterity;
+}
+
+function illusionistMinInt($intelligence)
+{
+    if($intelligence <= 14)
+    {
+        $intelligence = 15;
+    }
+
+    return $intelligence;
+}
+
+//druid
+function primeReq($dexterity, $intelligence)
+{
+    if($dexterity == 12)
+    {
+        return "";
+    }
+    else if( ($dexterity >= 13 && $dexterity <=15) && ($intelligence >= 13) )
+    {
+        return "+5% Experience Point Adjustment (Prime Requisite)<br/>";
+    }
+    else if( ($dexterity >= 16) && ($intelligence >= 13 && $intelligence <=15) )
+    {
+        return "+5% Experience Point Adjustment (Prime Requisite)<br/>";
+    }
+    else if( ($dexterity >= 16 && $dexterity <=18) && ($intelligence >= 16 && $intelligence <=18) )
+    {
+        return "+10% Experience Point Adjustment (Prime Requisite)<br/>";
+    }
+    else
+    {
+        return "";
+    }
+    
 }
 
 ?>

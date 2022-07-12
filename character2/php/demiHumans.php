@@ -109,7 +109,7 @@ function demiHumanSpellMod ($race)
     
 }
 
-/*Cleric Class*/
+/*Illusionist Class*/
 
 function levelLimit ($race, $level)
 {

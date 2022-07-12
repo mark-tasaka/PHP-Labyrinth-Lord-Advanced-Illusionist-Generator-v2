@@ -193,6 +193,7 @@
                 $dexterityString = $_POST["theDexterity"];
                 $dexterity = intval($dexterityString);
                 $dexterity = demiHumanDexterityRange($dexterity, $species);
+                $dexterity = illusionistMinDex($dexterity);
             }     
 
             if(isset($_POST["theConstitution"]))
@@ -207,6 +208,7 @@
                 $intelligenceString = $_POST["theIntelligence"];
                 $intelligence = intval($intelligenceString);
                 $intelligence = demiHumanIntelligenceRange($intelligence, $species);
+                $intelligence = illusionistMinInt($intelligence);
             }  
 
             if(isset($_POST["theWisdom"]))
@@ -248,10 +250,12 @@
             $strength = demiHumanStrengthRange($strength, $species);
             $dexterity = $abilityScoreArray[1];
             $dexterity = demiHumanDexterityRange($dexterity, $species);
+            $dexterity = illusionistMinDex($dexterity);
             $constitution = $abilityScoreArray[2];
             $constitution = demiHumanConstitutionRange($constitution, $species);
             $intelligence = $abilityScoreArray[3];
             $intelligence = demiHumanIntelligenceRange($intelligence, $species);
+            $intelligence = illusionistMinInt($intelligence);
             $wisdom = $abilityScoreArray[4];
             $wisdom = demiHumanWisdomRange($wisdom, $species);
             $charisma = $abilityScoreArray[5];
@@ -477,7 +481,7 @@
         $saveSpells -= $wisdomMod;
         $saveSpells -= $saveSpellsMod;
 
-        $primeReq = primeReq($intelligence);
+        $primeReq = primeReq($dexterity, $intelligence);
         $resSurvival = survivalResurrection($constitution);
         $shockSurvival = survivalShock($constitution);
         $spellProb = spellProbability ($intelligence);
@@ -540,8 +544,6 @@
         $level5Spells = spellsLevel5($level);
         $level6Spells = spellsLevel6($level);
         $level7Spells = spellsLevel7($level);
-        $level8Spells = spellsLevel8($level);
-        $level9Spells = spellsLevel9($level);
     
     ?>
 
@@ -1125,21 +1127,7 @@
             ?>
         </span>
         
-        <span id="level8Spells">
-            <?php
-                echo $level8Spells;
-            ?>
-        </span>
-        
-        <span id="level9Spells">
-            <?php
-                echo $level9Spells;
-            ?>
-        </span>
-        
 
-        
-       
 
        
 	</section>

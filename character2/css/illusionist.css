@@ -570,7 +570,7 @@ body{
 #level1Spells{
     position:absolute;
     top: 945px;
-    left: 196px;
+    left: 213px;
 	font-size: 1em;
 }
 
@@ -578,7 +578,7 @@ body{
 #level2Spells{
     position:absolute;
     top: 945px;
-    left: 243px;
+    left: 260px;
 	font-size: 1em;
 }
 
@@ -586,35 +586,35 @@ body{
 #level3Spells{
     position:absolute;
     top: 945px;
-    left: 292px;
+    left: 309px;
 	font-size: 1em;
 }
 
 #level4Spells{
     position:absolute;
     top: 945px;
-    left: 343px;
+    left: 360px;
 	font-size: 1em;
 }
 
 #level5Spells{
     position:absolute;
     top: 945px;
-    left: 395px;
+    left: 412px;
 	font-size: 1em;
 }
 
 #level6Spells{
     position:absolute;
     top: 945px;
-    left: 446px;
+    left: 462px;
 	font-size: 1em;
 }
 
 #level7Spells{
     position:absolute;
     top: 945px;
-    left: 495px;
+    left: 512px;
 	font-size: 1em;
 }
 
@@ -740,7 +740,7 @@ body{
 
 #classAbilities{
     position:absolute;
-    top: 990px;
+    top: 1020px;
     left: 35px;
 	font-size: 0.6em;
     width: 590px

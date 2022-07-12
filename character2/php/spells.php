@@ -100,15 +100,15 @@ function spellsLevel3($level)
 function spellsLevel4($level)
 {
     
-    if($level == 7)
+    if($level == 8)
     {
         return 1;
     }
-    else if($level >= 8 && $level <= 9)
+    else if($level >= 9 && $level <= 10)
     {
         return 2;
     }
-    else if($level >= 10 && $level <= 13)
+    else if($level >= 11 && $level <= 13)
     {
         return 3;
     }
@@ -130,15 +130,15 @@ function spellsLevel4($level)
 
 function spellsLevel5($level)
 {
-    if($level == 9)
+    if($level == 10)
     {
         return 1;
     }
-    else if($level >= 10 && $level <= 11)
+    else if($level >= 11 && $level <= 12)
     {
         return 2;
     }
-    else if($level >= 12 && $level <= 14)
+    else if($level >= 13 && $level <= 14)
     {
         return 3;
     }
@@ -159,21 +159,25 @@ function spellsLevel5($level)
 
 function spellsLevel6($level)
 {
-    if($level == 11)
+    if($level == 12)
     {
         return 1;
     }
-    else if($level >= 12 && $level <= 13)
+    else if($level >= 13 && $level <= 14)
     {
         return 2;
     }
-    else if($level >= 14 && $level <= 15)
+    else if($level >= 15 && $level <= 16)
     {
         return 3;
     }
-    else if($level >= 16 && $level <= 20)
+    else if($level >= 17 && $level <= 19)
     {
         return 4;
+    }
+    else if($level == 20)
+    {
+        return 5;
     }
     else
     {
@@ -185,19 +189,19 @@ function spellsLevel6($level)
 
 function spellsLevel7($level)
 {
-    if($level == 13)
+    if($level == 14)
     {
         return 1;
     }
-    else if($level >= 14 && $level <= 15)
+    else if($level >= 15 && $level <= 16)
     {
         return 2;
     }
-    else if($level == 16)
+    else if($level >= 17 && $level <= 18)
     {
         return 3;
     }
-    else if($level >= 17 && $level <= 20)
+    else if($level >= 19 && $level <= 20)
     {
         return 4;
     }
